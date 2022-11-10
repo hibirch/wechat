@@ -1,0 +1,56 @@
+<view class="p img">
+  <van-image radius="40" width="92vw" height="92vw" fit="cover" src="{{info.avatar}}" />
+  <view class="img-item">
+    <view class="center base" bindtap="returnPage">
+      <view class="img-item-bottom" style="background-color: #5278FD;">
+        <van-icon name="revoke" size="24" />
+      </view>
+      <view class="img-item-bottom-text">Return</view>
+    </view>
+    <view class="center base">
+      <view class="img-item-bottom" style="background-color: #f84868;">
+        <van-icon name="shield-o" size="24" />
+      </view>
+      <view class="img-item-bottom-text">Concern</view>
+    </view>
+    <view class="center base">
+      <view class="img-item-bottom" style="background-color: wheat;">
+        <button class="clearBtn" open-type="share" data-na="{{item.title}}">
+          <van-icon name="share-o" size="24" />
+        </button>
+      </view>
+      <view class="img-item-bottom-text">View</view>
+    </view>
+  </view>
+</view>
+<view class="p about">
+  <view class="base-row g4">About<view class="nickName">{{info.nickName}}</view>
+  </view>
+  <view class="text">{{info.explain}}</view>
+</view>
+<view class="p Space">
+  <view class="Space-box">Spcae</view>
+  <view class="Space-list ">
+    <block wx:for="{{postArr}}" wx:key="index">
+      <navigator url="/pages/post/post?id={{item._id}}&openid={{item.openId}}">
+        <view class="Space-list-box">
+          <van-image radius="8" width="42vw" height="42vw" fit="cover" src="{{item.post_image}}" />
+          <view class="Space-list-box-time">
+            <view>2022-11-9</view>
+            <view class="base-row g8">
+              <view class="base-row g2 center">
+                <van-icon name="like-o" size="12" />
+                <view class="text-num">{{item.like}}</view>
+              </view>
+              <view class="base-row g2 center">
+                <van-icon name="browsing-history-o" size="12" />
+                <view class="text-num">{{item.see}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+</view>
+<view class="detail-box"></view>

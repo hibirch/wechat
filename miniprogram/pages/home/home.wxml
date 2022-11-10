@@ -1,0 +1,56 @@
+<view class="header p g16">
+  <view class="title">Hot Space</view>
+  <view class="header-item">
+    <block wx:for="{{userArr}}" wx:key="index">
+      <navigator url="/pages/detail/detail?openid={{item.openId}}">
+        <view class="base g4 center">
+          <van-image radius="10" width="4rem" height="4rem" fit="cover" src="{{item.avatar}}" />
+          <view class="name-text">{{item.nickName}}</view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+</view>
+<view class="header p g16 mt">
+  <view class="title">Hot Post</view>
+  <view class="nav">
+    <block wx:for="{{postArr}}" wx:key="index">
+      <view class="nav-img">
+        <view class="nav-img-re">
+          <van-image radius="40" width="88vw" height="92vw" fit="cover" src="{{item.post_image}}" />
+          <view class="nav-img-bottom">
+            <navigator url="/pages/post/post?id={{item._id}}&openid={{item.openId}}&title={{item.title}}">
+              <view class="center base">
+                <view class="nav-img-bottom-item" style="background-color: #5278FD;">
+                  <van-icon name="fire-o" size="24" />
+                </view>
+                <view class="nav-img-bottom-text">View</view>
+              </view>
+            </navigator>
+            <view wx:if="{{like}}" class="center base" bindtap="likeAdd" data-id="{{item._id}}">
+              <view class="nav-img-bottom-item" style="background-color: #f84868;">
+                <van-icon name="like" size="24" color="red"/>
+              </view>
+              <view class="nav-img-bottom-text">Like</view>
+            </view>
+            <view wx:else bindtap="likeSub" class="center base" data-id="{{item._id}}">
+              <view class="nav-img-bottom-item" style="background-color: #f84868;">
+                <van-icon name="like-o" size="24" />
+              </view>
+              <view class="nav-img-bottom-text">Like</view>
+            </view>
+            <view class="center base">
+              <view class="nav-img-bottom-item" style="background-color: wheat;">
+                <button class="clearBtn" open-type="share" data-na="{{item.title}}">
+                  <van-icon name="share-o" size="24" />
+                </button>
+              </view>
+              <view class="nav-img-bottom-text">Share</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+<view class="box-box" />

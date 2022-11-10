@@ -1,0 +1,8 @@
+<van-cell-group>
+  <van-field value="{{ message }}" type="textarea" placeholder="终于来啦，来聊一聊吧..." auto-focus clearable autosize border="{{ false }}" bind:change="onChange">
+    <van-button slot="button" size="small" type="primary" bindtap="onSubmit">
+      发表
+    </van-button>
+    <van-toast id="van-toast" />
+  </van-field>
+</van-cell-group>

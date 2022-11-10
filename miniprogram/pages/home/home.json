@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index",
+    "van-share-sheet": "@vant/weapp/share-sheet/index"
+  },
+  "navigationBarTitleText":"疯疯风"
+}

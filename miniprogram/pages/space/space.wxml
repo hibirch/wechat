@@ -1,0 +1,38 @@
+<view class="base space">
+  <view class="space-title">空间管理</view>
+  <view class="space-nav">
+    <navigator url="/pages/create/create">
+      <view class="space-nav-item" style="background-color:bisque ;">建造</view>
+    </navigator>
+    <view class="space-nav-item" style="background-color:#FECF6A ;" bindtap="handleChange">更改</view>
+    <view class="space-nav-item" style="background-color:#FFAB91;" bindtap="onDel">删除</view>
+    <view class="space-nav-item" style="background-color:#82CAAF;" bindtap="onView">查看</view>
+  </view>
+</view>
+<view class="base space">
+  <view class="space-title">我的空间</view>
+  <block wx:for="{{postArr}}" wx:key="index">
+    <view class="space-user">
+      <view class="space-user-header">
+        <view class="base-row g4 aicer">
+          <view class="base g4">{{item.title}}</view>
+          <view class="base g4 time">{{item.time}}</view>
+        </view>
+        <view wx:if="{{operation.del}}" class="space-user-header-focus" style="background-color: #F44336;color: white;" bindtap="onRemove" data-id="{{item._id}}">删除</view>
+        <view wx:if="{{operation.view}}">
+          <navigator url="/pages/post/post?id={{item._id}}&&title={{item.title}}&&openid={{item.openId}}">
+            <view class="space-user-header-focus" style="background-color: #82CAAF; color:#121212 ;">查看</view>
+          </navigator>
+        </view>
+        <view wx:if="{{operation.change}}">
+          <navigator url="/pages/change/change?id={{item._id}}">
+            <view class="space-user-header-focus" style="background-color: #FECF6A; color:#121212 ;">更改</view>
+          </navigator>
+        </view>
+      </view>
+      <navigator url="/pages/post/post?id={{item._id}}&&title={{item.title}}&&openid={{item.openId}}">
+        <van-image radius="5" width="84vw" height="30vh" fit="cover" src="{{item.post_image}}" />
+      </navigator>
+    </view>
+  </block>
+</view>

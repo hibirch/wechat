@@ -1,0 +1,43 @@
+<view class="base top g16">
+  <view class="base-row jcsb">
+    <view class="base-row g16 ">
+      <button class="avatar-wrapper" bind:chooseavatar="onChooseAvatar">
+        <image class="avatar" src="{{user.avatarUrl}}"></image>
+      </button>
+      <view class="base g8">
+        <view class="avatar-name">{{user.nickname}}</view>
+        <view wx:if="{{user.userId == 0}}" class="base-row id">
+          <view>风风号：</view>
+          <view>{{user.userId}}</view>
+        </view>
+      </view>
+    </view>
+    <navigator url="/pages/edit/edit?openId={{user.openId}}">
+      <view class="base-row edit g4">
+        <van-icon name="edit" />
+        <button class="b edit-b">编辑信息</button>
+      </view>
+    </navigator>
+  </view>
+  <view class="base-row jcsa">
+  <view class="input-me">{{user.explain}}</view>
+  </view>
+</view>
+<!-- 
+<van-tabs swipeable active="{{ active }}">
+  <van-tab title="我的动态">
+    <view class="wrapper">
+      <view class="list">
+        <view class="list-item" wx:for="{{dynamic}}" wx:key="this">
+          <van-image radius="15px" width="10rem" height="10rem" fit="cover" src="{{item.bg}}" />
+          <view class="list-item-time">{{item.time}}</view>
+          <view class="list-item-love base-row g4">
+            <van-icon name="like-o" color="white" />
+            <view>{{item.like}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="设置"></van-tab>
+</van-tabs> -->

@@ -1,0 +1,18 @@
+<van-cell-group>
+  <van-notify id="van-notify" />
+  <van-field value="{{ post_title }}" required clearable label="标题" icon="question-o" placeholder="请输入标题" bind:click-icon="onClickIcon" bind:change="onChangeTitle"/>
+</van-cell-group>
+<view class="base plr g8">
+  <view class="text base-row">
+    <view class="red">*</view>封面
+  </view>
+  <view class="base-row center">
+    <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead" max-count="1" deletable="{{ true }}" bind:delete="del"/>
+  </view>
+</view>
+<view class="submit">
+  <van-toast id="van-toast" />
+  <van-toast id="van-toast" />
+  <van-toast id="van-toast" />
+  <button class="but b" bindtap="submit">修改</button>
+</view>

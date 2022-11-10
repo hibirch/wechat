@@ -1,0 +1,87 @@
+<view class="base-row jcsb plr-2 bb">
+  <view class="base-row g8">
+    <van-image round width="2.5rem" height="2.5rem" src="{{avatar}}" />
+    <view>{{nickName}}</view>
+  </view>
+  <view wx:if="{{!isSelf}}" class="focus">+ 关注</view>
+</view>
+<view class="plr-2">
+  <van-image width="100%" height="25rem" fit="cover" src="{{info.post_image}}" />
+</view>
+<view class="plr-2 base-row post-text">
+  <rich-text nodes="{{info.post_content}}"></rich-text>
+</view>
+<view class="plr-2">
+  <rich-text nodes="{{htmlSnip}}"></rich-text>
+</view>
+<view class="plr-2 base-row jcsb time bt">
+  <view class="base-row g4">
+    <view>发布于</view>
+    <view>{{info.time}}</view>
+  </view>
+  <view class="base-row g4">
+    <!-- <view class="base-row g4">
+      <van-icon name="star-o" color="#515151" />
+      <view>{{info.collect}}</view>
+    </view> -->
+    <view class="base-row g4">
+      <van-icon wx:if="{{like}}" name="like" color="#EF5350" />
+      <van-icon wx:if="{{!like}}" name="like-o" color="#515151" />
+      <view>{{info.like}}</view>
+    </view>
+    <view class="base-row g4">
+      <van-icon name="browsing-history-o" color="#515151" />
+      <view>{{info.see}}</view>
+    </view>
+  </view>
+</view>
+<view class="base plr-2">
+  <view class="base-row jcsb">
+    <view class="base-row g8 title">
+      <view>全部评论</view>
+      <view>({{count}})</view>
+    </view>
+    <!-- 排序 -->
+    <!-- <van-icon name="flower-o" /> -->
+  </view>
+  <block wx:for="{{commentArr}}" wx:key="index">
+    <view class="base comments-item g8">
+      <view class="base-row g4 comments">
+        <van-image round width="2rem" height="2rem" fit="cover" src="{{item.comment_avatar}}" />
+        <view class="name">{{item.comment_nickName}}</view>
+      </view>
+      <view class="content">{{item.comment_content}}</view>
+      <view class="content jcsb base-row time">
+        <view>{{item.comment_time}}</view>
+        <view class="base-row g4">
+          <view bindtap="reComment" wx:if="{{comment == true}}" data-id="{{item._id}}">
+            <van-icon name="like" color="#EF5350" />
+          </view>
+          <view bindtap="onComment" wx:else data-id="{{item._id}}">
+            <van-icon name="like-o" color="#515151" />
+          </view>
+          <view>{{item.comment_start}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+<view class="box"></view>
+<view class="work">
+  <van-cell-group>
+    <navigator url="/pages/comment/comment?id={{id}}">
+      <van-field value="{{ value }}" placeholder="终于来啦，来聊一聊吧..." border="{{ false }}" bind:change="onChange" left-icon="edit" input-class="input" />
+    </navigator>
+  </van-cell-group>
+  <view class="icon">
+    <view bindtap="relike" wx:if="{{like == true}}">
+      <van-icon name="like" color="#EF5350" />
+    </view>
+    <view bindtap="onlike" wx:else>
+      <van-icon name="like-o" color="#515151" />
+    </view>
+    <button class="clearBtn" open-type="share" data-na="{{info.title}}">
+      <van-icon name="share-o"  color="#515151"/>
+    </button>
+  </view>
+</view>

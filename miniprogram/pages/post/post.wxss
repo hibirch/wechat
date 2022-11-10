@@ -1,0 +1,98 @@
+.focus {
+  font-size: small;
+  color: white;
+  background-color: rgb(202, 80, 80);
+  width: 3.6rem;
+  height: 1.5rem;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-text {
+  width: 100vw;
+  justify-content: start;
+  font-size: x-small;
+}
+
+.time {
+  font-size: x-small;
+  color: #515151;
+}
+
+.title {
+  font-size: small;
+  margin-top: .5vh;
+  margin-bottom: 1vh;
+}
+
+.comments {
+  align-items: center;
+}
+
+.name {
+  font-size: small;
+  margin-bottom: 0.5rem;
+}
+
+.comments-item {
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  border-bottom: solid .5px rgb(235, 234, 234);
+}
+
+.content {
+  width: 85vw;
+  margin-left: 2rem;
+  word-break: break-all;
+}
+
+.work {
+  position: fixed;
+  bottom: .5vh;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-top: solid .5px rgb(250, 250, 250);
+  background-color: white;
+}
+
+.work-text {
+  font-size: small;
+}
+
+.input {
+  color: red;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  width: 30vw;
+  justify-content: space-around;
+}
+
+.box {
+  width: 100%;
+  height: 3rem;
+}
+
+.bb {
+  border-bottom: solid .5px rgba(230,230,230,1);
+}
+
+.bt {
+  border-top:solid .5px rgba(230,230,230,1) ;
+}
+
+.boxx {
+  background-color: black;
+}
+
+.clearBtn{
+	margin:0;
+	padding: 0;
+	line-height: 1;
+	background-color:transparent;
+}

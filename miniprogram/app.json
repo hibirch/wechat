@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/me/me",
+    "pages/create/create",
+    "pages/post/post",
+    "pages/detail/detail",
+    "pages/edit/edit",
+    "pages/space/space",
+    "pages/change/change",
+    "pages/comment/comment"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "疯疯风",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-overlay": "@vant/weapp/overlay/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-notify": "@vant/weapp/notify/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index",
+    "van-share-sheet": "@vant/weapp/share-sheet/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/home/home"
+      },
+      {
+        "pagePath": "pages/space/space"
+      },
+      {
+        "pagePath": "pages/me/me"
+      }
+    ]
+  }
+}

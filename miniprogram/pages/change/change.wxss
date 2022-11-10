@@ -1,0 +1,43 @@
+.center {
+  width: 100%;
+  justify-content: center;
+  padding-bottom: 2vh;
+}
+
+.plr {
+  width: 92vw;
+  padding-top: 2vh;
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+.text {
+  font-size: small;
+  font-weight: 600;
+  color: gray;
+}
+
+.red {
+  color: red;
+}
+
+.submit {
+  width: 100vw;
+  height: 6vh;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vh;
+}
+
+.but {
+  height: 100%;
+  width: 30vw;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background-color: rgb(34, 235, 141);
+}

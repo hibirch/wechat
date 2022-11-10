@@ -1,0 +1,34 @@
+<view class="base">
+  <view class="nav">
+    <view>头像</view>
+    <view class="base-row g4 ">
+      <button class="b button" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+        <image class="img" src="{{avatarUrl}}" />
+      </button>
+      <van-icon name="arrow" color="gray" />
+    </view>
+  </view>
+  <form bindsubmit="editForm">
+    <view class="nav">
+      <view class="base-row g16">
+        <view>昵称</view>
+        <input name='nickName' type="nickname" class="input" placeholder="请输入昵称" />
+      </view>
+      <view class="base-row g4 ">
+        <van-icon name="arrow" color="gray" />
+      </view>
+    </view>
+    <view class="nav">
+      <view class="base-row g16">
+        <view>签名</view>
+        <input name='explain' class="input" placeholder="{{explain}}" />
+      </view>
+      <view class="base-row g4 ">
+        <van-icon name="arrow" color="gray" />
+      </view>
+    </view>
+    <view class="submit">
+      <van-button formType="submit" type="primary">确认</van-button>
+    </view>
+  </form>
+</view>

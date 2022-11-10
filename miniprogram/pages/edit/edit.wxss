@@ -1,0 +1,41 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  width: 92vw;
+  border-bottom: solid .5px rgb(250, 250, 250);
+  color: #515151;
+  align-items: center;
+}
+
+.nav-text {
+  font-size: x-small;
+}
+
+.img {
+  border-radius: 8px;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.button {
+  height: 2.5rem;
+}
+
+.input {
+  width: 70vw;
+  font-size: small;
+}
+
+.submit{
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  width: 92vw;
+  display: flex;
+  justify-content: center;
+}

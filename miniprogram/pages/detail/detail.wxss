@@ -1,0 +1,116 @@
+.p {
+  padding-top: 1vh;
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+.img {
+  width: 92vw;
+  position: relative;
+  padding-bottom: 24px;
+  box-shadow: 5px 5px 5px rgba(12,12,12,0.1);
+}
+
+.img-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 92vw;
+  position: absolute;
+  bottom: -42px;
+  gap: 8vw;
+}
+
+.img-item-bottom {
+  padding: 12px;
+  border-radius: 16px;
+}
+
+.img-item-bottom-text {
+  font-size: xx-small;
+}
+
+.center {
+  text-align: center;
+}
+
+.g2 {
+  gap: 2px;
+}
+
+.about {
+  margin-top: 48px;
+  font-weight: 600;
+}
+.Space {
+  margin-top: 24px;
+  font-weight: 600;
+}
+.Space-box {
+  margin-bottom: 2vh;
+}
+
+.clearBtn{
+	margin:0;
+	padding: 0;
+	line-height: 1;
+	background-color:transparent;
+}
+
+.text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 1vh;
+  color: #727272;
+  font-weight: 500;
+  width: 92vw;
+  word-wrap: break-word;
+}
+
+.Space-list {
+  display: flex;
+  width: 92vw;
+  flex-flow: row wrap;
+  justify-content:start;
+  align-items: center;
+  gap: 4vw;
+}
+
+.Space-list-box {
+  padding-top: .5vh;
+  padding-bottom: .5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44vw;
+  gap: .5vh;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(20,20,20,0.1);
+}
+
+.Space-list-box-time {
+  font-size: x-small;
+  color: #515151;
+  display: flex;
+  width: 42vw;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nickName {
+  font-weight: 500;
+  color: rgb(231, 199, 92);
+}
+
+.text-num {
+  color: rgb(102, 102, 102);
+}
+
+.detail-box {
+  width: 100vw;
+  height: 2vh;
+  background-color:transparent;
+}
